@@ -351,7 +351,7 @@ else:
 st.sidebar.title("PLN ULP DINOYO")
 st.sidebar.markdown(
     "<a href='https://maps.app.goo.gl/CnhdCBrhz3mihieL9' "
-    "style='text-decoration:none; color:#0000FF;' target='_blank'>"
+    "style='text-decoration:none; color:#1e90f9;' target='_blank'>"
     "📍 Jl. Pandan No.15, Gading Kasri, Kec. Klojen, Kota Malang, Jawa Timur 65115"
     "</a>",
     unsafe_allow_html=True
@@ -371,7 +371,7 @@ st.sidebar.subheader("👨‍💻 Developed By")
 st.sidebar.write("@Yudaneru Vebrianto**")
 st.sidebar.markdown(
     "<a href='https://www.linkedin.com/in/yudaneru-vebrianto/' "
-    "style='text-decoration:none; color:#0000FF;' target='_blank'>"
+    "style='text-decoration:none; color:#1e90f9;' target='_blank'>"
     "LinkedIn / Yudaneru Vebrianto"
     "</a>",
     unsafe_allow_html=True
@@ -379,7 +379,7 @@ st.sidebar.markdown(
 st.sidebar.write("@Muhammad Aqil Fauzi**")
 st.sidebar.markdown(
     "<a href='https://www.linkedin.com/in/muhammad-aqil-fauzi/' "
-    "style='text-decoration:none; color:#0000FF;' target='_blank'>"
+    "style='text-decoration:none; color:#1e90f9;' target='_blank'>"
     "LinkedIn / Muhammad Aqil Fauzi"
     "</a>",
     unsafe_allow_html=True
