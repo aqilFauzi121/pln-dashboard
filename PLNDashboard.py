@@ -19,6 +19,26 @@ from google.oauth2.service_account import Credentials as GoogleCredentials
 from PIL import Image
 from streamlit_autorefresh import st_autorefresh
 
+# BASE = folder tempat PLNDashboard.py berada (root repo app)
+BASE = Path(__file__).parent
+
+def load_asset_image(fname):
+    p = BASE / "assets" / fname
+    if not p.exists():
+        try:
+            st.sidebar.warning(f"Asset tidak ditemukan: {p.name}")
+        except Exception:
+            pass
+        return None
+    try:
+        return Image.open(p)
+    except Exception as e:
+        try:
+            st.sidebar.warning(f"Gagal membuka gambar {p.name}: {e}")
+        except Exception:
+            pass
+        return None
+
 # -------- timezone imports (fixed for Pylance) --------
 ZoneInfo = None  # type: ignore
 pytz = None  # type: ignore
@@ -316,8 +336,11 @@ def log_history(target_sheet_id: str, action: str, details: str, user: str = "an
             pass
 
 # ---------------- Sidebar menu ----------------
-logo = Image.open(r"C:\Users\aqilf\Downloads\my-pln-dashboard\assets\logo_pln.png")
-st.sidebar.image(logo, width=120)
+logo = load_asset_image("logo_pln.png")
+if logo is not None:
+    st.sidebar.image(logo, width=120)
+else:
+    st.sidebar.write("Logo PLN (tidak tersedia)")
 st.sidebar.title("PLN ULP DINOYO")
 st.sidebar.markdown(
     "<a href='https://maps.app.goo.gl/CnhdCBrhz3mihieL9' "
@@ -893,9 +916,14 @@ if menu == "Analisis Data":
         df_merged.to_excel(output, index=False)
         output.seek(0)
 
+        excel_icon = load_asset_image("logo_excel.jpg")
         col1, col2 = st.columns([1,15])
         with col1:
-            st.image(r"C:\Users\aqilf\Downloads\my-pln-dashboard\assets\logo_excel.jpg",width=40)
+            if excel_icon is not None:
+                st.image(excel_icon, width=40)
+            else:
+                # fallback: kosongkan atau tampilkan teks kecil
+                st.write("")
         with col2:
             st.download_button(
                 label="Download Hasil ke Excel",
