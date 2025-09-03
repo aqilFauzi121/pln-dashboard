@@ -356,17 +356,17 @@ st.sidebar.markdown(
     "</a>",
     unsafe_allow_html=True
 )
-st.sidebar.markdown("<hr style='border:1px solid #04aceb;'>", unsafe_allow_html=True)
+st.sidebar.markdown("----")
 
 # CHANGES: use a non-empty label so Streamlit doesn't warn
 menu = st.sidebar.selectbox("📊 Pilih Menu", ["Analisis Data", "Tambah Data","History"], index=0)
 
-st.sidebar.markdown("<hr style='border:1px solid #04aceb;'>", unsafe_allow_html=True)
+st.sidebar.markdown("----")
 st.sidebar.subheader("🕒 Waktu Akses")
 st.sidebar.write(f"📅 {now_jakarta().strftime('%d-%m-%Y')}")
 st.sidebar.write(f"⏰ {now_jakarta().strftime('%H:%M:%S')}")
 
-st.sidebar.markdown("<hr style='border:1px solid #04aceb;'>", unsafe_allow_html=True)
+st.sidebar.markdown("----")
 st.sidebar.subheader("👨‍💻 Developed By")
 st.sidebar.write("@Yudaneru Vebrianto**")
 st.sidebar.markdown(
