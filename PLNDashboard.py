@@ -397,7 +397,7 @@ if menu == "Analisis Data":
         analysis_mode = st.radio(
             "Pilih mode analisis:",
             ["Penurunan saja", "Rumah kosong (LBKB) saja", "Penurunan + Rumah Kosong (LBKB)"],
-            index=2
+            index=0
         )
         col_confirm, col_info = st.columns([1,3])
         with col_confirm:
