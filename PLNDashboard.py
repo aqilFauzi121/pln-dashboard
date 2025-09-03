@@ -368,7 +368,7 @@ st.sidebar.write(f"⏰ {now_jakarta().strftime('%H:%M:%S')}")
 
 st.sidebar.markdown("----")
 st.sidebar.subheader("👨‍💻 Developed By")
-st.sidebar.write("@Yudaneru Vebrianto**")
+st.sidebar.write("**@Yudaneru Vebrianto**")
 st.sidebar.markdown(
     "<a href='https://www.linkedin.com/in/yudaneru-vebrianto/' "
     "style='text-decoration:none; color:#1e90f9;' target='_blank'>"
@@ -376,7 +376,7 @@ st.sidebar.markdown(
     "</a>",
     unsafe_allow_html=True
 )
-st.sidebar.write("@Muhammad Aqil Fauzi**")
+st.sidebar.write("**@Muhammad Aqil Fauzi**")
 st.sidebar.markdown(
     "<a href='https://www.linkedin.com/in/muhammad-aqil-fauzi/' "
     "style='text-decoration:none; color:#1e90f9;' target='_blank'>"
