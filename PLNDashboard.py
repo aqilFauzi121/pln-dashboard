@@ -68,13 +68,16 @@ def now_jakarta():
     return datetime.now()
 
 # -----------------------------------------------------
+page_icon_img = load_asset_image("logo_pln.png")
 
-st.set_page_config(page_title="Analisis Penurunan & Rumah Kosong", layout="wide")
-logo = load_asset_image("logo_pln.png")
-if logo is not None:
-    st.image(logo, width=220, use_column_width=False)
-else:
-    st.title("Analisis Penurunan & Rumah Kosong (Gabungan 2 Sheet)")
+if page_icon_img is None:
+    page_icon_img = "⚡️"
+    
+st.set_page_config(
+    page_title="Analisis Penurunan & Rumah Kosong",
+    page_icon=page_icon_img,  # langsung pakai hasil load_asset_image
+    layout="wide"
+)
     
 # ====== CONFIG: ganti dengan Sheet ID/GID kamu ======
 SHEET_ID_CONS = "1mvYcJ8LMFkPwMN6SshPmRMwSwlkMuxmEHjm46dJyWDw"
