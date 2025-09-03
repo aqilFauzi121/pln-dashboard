@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+requests
+toml
+gspread
+google-auth
+Pillow
+streamlit-autorefresh
