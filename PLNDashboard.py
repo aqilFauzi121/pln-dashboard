@@ -70,8 +70,12 @@ def now_jakarta():
 # -----------------------------------------------------
 
 st.set_page_config(page_title="Analisis Penurunan & Rumah Kosong", layout="wide")
-st.title("Analisis Penurunan & Rumah Kosong (Gabungan 2 Sheet)")
-
+logo = load_asset_image("logo_pln.png")
+if logo is not None:
+    st.image(logo, width=220, use_column_width=False)
+else:
+    st.title("Analisis Penurunan & Rumah Kosong (Gabungan 2 Sheet)")
+    
 # ====== CONFIG: ganti dengan Sheet ID/GID kamu ======
 SHEET_ID_CONS = "1mvYcJ8LMFkPwMN6SshPmRMwSwlkMuxmEHjm46dJyWDw"
 GID_CONS = "595704292"
